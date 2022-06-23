@@ -1,0 +1,31 @@
+// Typograhpy styles
+
+body {
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: rem(0.7);
+}
+
+h1 {
+    font-size: rem(23);
+}
+
+p {
+    line-height: rem(22);
+    opacity: 90%;
+    font-size: rem(15);
+}
+
+ul {
+    list-style-type: none;
+    @include gap(row, rem(10));
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+.section-heading {
+    opacity: 70%;
+    margin-top: rem(30);
+}

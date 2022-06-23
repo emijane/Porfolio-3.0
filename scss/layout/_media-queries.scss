@@ -1,0 +1,55 @@
+// Tablet Queries
+
+// Removes height from body
+html, body {
+    @include tablet {
+        height:auto;
+    }
+}
+
+// Removes width from container
+.container {
+    @include tablet {
+        max-width: rem(850) !important;
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+// Adjusts profile picture
+.profile-pic img {
+    @include tablet {
+        @include circular-image(rem(100), rem(100));
+        margin: 0;
+        top: 100%;
+        transform: translateY(-50%);
+
+    }
+}
+
+// Moves content from profile picture
+.content {
+    @include tablet {
+        margin-top: rem(50);
+        padding-left: rem(15);
+        padding-right: rem(15);
+    }
+}
+
+.circle1,
+.circle2,
+.circle3,
+.circle4 {
+    @include tablet {
+        display: none;
+    }
+}
+
+// Mobile Queries
+
+.text-wrap {
+    @include mobile {
+        flex-direction: column !important;
+        gap: rem(1) !important;
+    }
+}

@@ -1,0 +1,6 @@
+.skills {
+    &__tags {
+        @include wrap;
+        @include tags($color-primary-l, $color-primary-d);
+    }
+}

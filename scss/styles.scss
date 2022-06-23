@@ -1,0 +1,24 @@
+// Main: it should ONLY contain the imports for the below files.
+
+// Abstract Styles
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Base Styles
+@import 'base/reset';
+@import 'base/typography';
+
+//Components
+@import 'components/buttons';
+@import 'components/icons';
+@import 'components/skills';
+@import 'components/circles';
+@import 'components/posts';
+
+//Layout
+@import 'layout/container';
+@import 'layout/footer';
+@import 'layout/masthead';
+@import 'layout/navigation';
+@import 'layout/media-queries';

@@ -1,0 +1,87 @@
+// Mixins
+
+// Center elements
+@mixin flex($flex-direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $flex-direction; // flex-direction: column (flex-direction is default to row)
+}
+
+// Set gap between elements and change flex direction
+@mixin gap($flex-direction, $gap) {
+    display: flex; 
+    flex-direction: $flex-direction; // flex-direction: column (flex-direction is default to row)
+    gap: $gap; // use gap to add space between flex items
+}
+
+// Wrap elements onto new line
+@mixin wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Circular image with adjustable size
+@mixin circular-image($width, $height) {
+    width: $width;
+    height: $height;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+// tags
+@mixin tags($border, $hover) {
+    margin-top: rem(5);
+
+    li {
+        font-size: rem(13);
+        font-weight: 600;
+        border: 1px solid $border;
+        border-radius: rem(13);
+        padding: rem(6);
+        transition: all 0.3s ease;
+
+        &:hover {
+            border: 1px solid $hover;
+        }
+    }
+}
+
+// Circle styles
+@mixin circle($width, $height, $color, $blur) {
+    max-width: $width;
+    max-height: $height;
+    background: $color;
+    border-radius: 50%;
+    filter: blur($blur);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// Circle pulse animation
+@mixin circle-pulse($delay) {
+    animation: pulse 5s infinite;
+    animation-direction: alternate;
+    animation-delay: $delay;
+}
+
+// Mobile mixins
+
+// desktop: 1024px
+@mixin desktop {
+    @media (max-width: rem(1024)) { @content; }
+}
+
+// tablet: 768px
+@mixin tablet {
+    @media (max-width: rem(850)) { @content; }
+}
+
+// mobile: 640px
+@mixin mobile {
+    @media (max-width: rem(640)) { @content; }
+}
+

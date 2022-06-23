@@ -1,0 +1,36 @@
+.post {
+    padding: rem(10);
+    @include gap(row, rem(20));
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $color-secondary-l;
+        border-radius: rem(10);
+    }
+
+    &__column1{
+        margin-top: rem(3);
+        @include circular-image(rem(60), rem(60));
+    }
+
+    &__column2 {
+        width: 90%;
+        @include gap(column, rem(5));
+
+        .text-wrap {
+            @include gap(row, rem(9));
+
+            .name {
+                font-weight: 600;
+            }
+
+            .username {
+                opacity: 70%;
+            }
+        }
+
+        .post-text {
+            font-size: rem(15);
+        }
+    }
+}

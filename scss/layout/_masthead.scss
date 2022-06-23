@@ -1,0 +1,12 @@
+// Masthead styles
+
+.masthead img {
+    max-height: rem(250);
+    width: rem(800);
+    max-width: 100%;
+    object-fit: cover;
+    border-top-right-radius: rem(20);
+    border-top-left-radius: rem(20);
+    backdrop-filter: blur(10px);
+    opacity: 80%;
+}
